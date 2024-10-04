@@ -1,0 +1,92 @@
+// Styling for Detail page
+.detail-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  &__image-container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+  }
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  &__image:hover {
+    transform: scale(1.05);
+  }
+
+  &__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+  }
+
+  &__content {
+    padding: 20px;
+  }
+
+  &__description {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  &__button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  &__button:hover {
+    background-color: #0056b3;
+  }
+
+  // Loading Spinner Style
+  .loading-spinner {
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    animation: spin 1s linear infinite;
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.country-view {
+  padding: 2rem;
+  transition: background-color 0.3s ease;
+
+  // Gaya untuk tema gelap
+  &.dark {
+    background-color: #1a202c;
+
+    .card {
+      background-color: #2d3748;
+      color: #e2e8f0;
+    }
+
+    h1 {
+      color: #ffffff;
+    }
+
+    p {
+      color: #cbd5e0;
+    }
+  }
+}
+
+// Responsif untuk grid
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
